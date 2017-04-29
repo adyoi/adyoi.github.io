@@ -110,3 +110,5 @@ sharing:
   gplus:          false
   hn:             false
   google:         false
+
+theme: jekyll-theme-cayman
