@@ -123,13 +123,17 @@
             border: none;
             color: #64B5F6;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 1rem;
             padding: 5px;
             transition: transform 0.3s ease;
         }
 
-        .toggle-btn.active {
-            transform: rotate(180deg);
+        .toggle-btn::before {
+            content: '▼';
+        }
+
+        .toggle-btn.active::before {
+            content: '▲';
         }
 
         .tools {
@@ -158,7 +162,7 @@
         .tool-name {
             font-weight: bold;
             color: #FFFFFF;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .tool-name:hover {
@@ -248,7 +252,7 @@
     <!-- Header Section -->
     <header class="header">
         <div class="header-content">
-            <img src="https://via.placeholder.com/50" alt="Pentesting & Tools Logo" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Shield-icon.svg/1200px-Shield-icon.svg.png" alt="Pentesting & Tools Logo" class="logo">
             <h1>Pentesting & Tools</h1>
         </div>
         <div class="header-actions">
@@ -269,6 +273,8 @@
                 <option value="wifi">WiFi Pentesting</option>
                 <option value="devsecops">DevSecOps</option>
                 <option value="osint">OSINT (Open-Source Intelligence)</option>
+                <option value="ai-pentesting">AI-Driven Pentesting</option>
+                <option value="zero-trust">Zero Trust Assessment</option>
             </select>
             <button class="export-btn">Export: PDF/CSV</button>
             <button class="feedback-btn">Feedback</button>
@@ -288,785 +294,897 @@
         <div class="no-results">No tools found matching your search or filter.</div>
 
         <section class="category" data-category="web-app">
-            <h2 class="category-title">🌐 Web Application Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🌐 Web Application Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="web vulnerability scanning manipulation">
                     <span class="tool-name">Burp Suite Pro ⭐</span>
                     <p class="tool-desc">Advanced web vulnerability scanning and manipulation.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://portswigger.net/burp" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web security scanning vulnerabilities">
                     <span class="tool-name">Acunetix</span>
                     <p class="tool-desc">Automated web security scanning for vulnerabilities.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.acunetix.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web application security enterprise">
                     <span class="tool-name">HCL AppScan</span>
                     <p class="tool-desc">Enterprise-grade web application security testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.hcltechsw.com/appscan" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web vulnerability assessment ai">
                     <span class="tool-name">Invicti Netsparker</span>
                     <p class="tool-desc">AI-powered web vulnerability assessment.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.invicti.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web app security static dynamic">
                     <span class="tool-name">Fortify WebInspect</span>
                     <p class="tool-desc">Static and dynamic web app security testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.microfocus.com/en-us/cyberres/webinspect" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web attack audit open-source">
                     <span class="tool-name">W3af</span>
                     <p class="tool-desc">Open-source web application attack and audit framework.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://w3af.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web server scanner vulnerabilities">
                     <span class="tool-name">Nikto</span>
                     <p class="tool-desc">Web server scanner for vulnerabilities.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://cirt.net/Nikto2" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web vulnerability scanner customizable">
                     <span class="tool-name">Nuclei</span>
                     <p class="tool-desc">Fast and customizable vulnerability scanner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/projectdiscovery/nuclei" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web sql injection database">
                     <span class="tool-name">SQLMap</span>
                     <p class="tool-desc">Automated SQL injection and database takeover tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://sqlmap.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="web app security open-source">
                     <span class="tool-name">OWASP ZAP</span>
                     <p class="tool-desc">Open-source web app security testing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.zap.org/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="android-sec">
-            <h2 class="category-title">📱 Android Security <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">📱 Android Security <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="android static dynamic analysis mobile">
                     <span class="tool-name">MobSF (Mobile Security Framework)</span>
                     <p class="tool-desc">Static and dynamic analysis for mobile apps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android dynamic instrumentation runtime">
                     <span class="tool-name">Frida</span>
                     <p class="tool-desc">Dynamic instrumentation toolkit for apps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://frida.re/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android reverse engineering apk">
                     <span class="tool-name">APKTool</span>
                     <p class="tool-desc">Reverse engineering tool for Android APKs.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://ibotpeaches.github.io/Apktool/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android decompiler apps">
                     <span class="tool-name">JADX-gui</span>
                     <p class="tool-desc">Decompiler for Android apps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/skylot/jadx" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android development emulation testing">
                     <span class="tool-name">Android Studio/Genymotion</span>
                     <p class="tool-desc">Development and emulation for Android testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://developer.android.com/studio" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android security assessment">
                     <span class="tool-name">Drozer</span>
                     <p class="tool-desc">Security assessment tool for Android.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/FSecureLABS/drozer" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android rooting customization">
                     <span class="tool-name">Magisk Root</span>
                     <p class="tool-desc">Rooting and customization tool for Android.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/topjohnwu/Magisk" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android http https traffic intercept">
                     <span class="tool-name">mitmproxy</span>
                     <p class="tool-desc">Intercept and manipulate HTTP/HTTPS traffic.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://mitmproxy.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android runtime mobile exploration">
                     <span class="tool-name">Objection</span>
                     <p class="tool-desc">Runtime mobile exploration tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/sensepost/objection" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="android debug bridge device">
                     <span class="tool-name">adb</span>
                     <p class="tool-desc">Android Debug Bridge for device interaction.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://developer.android.com/tools/adb" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="ios-sec">
-            <h2 class="category-title">🍎 iOS Security <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🍎 iOS Security <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="ios static dynamic analysis mobile">
                     <span class="tool-name">MobSF</span>
                     <p class="tool-desc">Static and dynamic analysis for iOS apps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios dynamic instrumentation runtime">
                     <span class="tool-name">Frida</span>
                     <p class="tool-desc">Dynamic instrumentation toolkit for iOS.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://frida.re/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios runtime mobile exploration">
                     <span class="tool-name">Objection</span>
                     <p class="tool-desc">Runtime mobile exploration for iOS.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/sensepost/objection" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios runtime inspection manipulation">
                     <span class="tool-name">Cycript</span>
                     <p class="tool-desc">iOS runtime inspection and manipulation.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.cycript.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios security assessment">
                     <span class="tool-name">iOS Hooking – Needle</span>
                     <p class="tool-desc">iOS security assessment tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/mwrlabs/needle" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios objective-c runtime extraction">
                     <span class="tool-name">Class-dump</span>
                     <p class="tool-desc">Tool to extract Objective-C runtime information.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/nygard/class-dump" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios ssl pinning bypass">
                     <span class="tool-name">SSL Kill Switch 2</span>
                     <p class="tool-desc">Bypass SSL pinning on iOS.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/iSECPartners/ssl-kill-switch2" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios device management backup">
                     <span class="tool-name">iMazing</span>
                     <p class="tool-desc">iOS device management and backup tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://imazing.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios app analysis exploitation">
                     <span class="tool-name">Passionfruit</span>
                     <p class="tool-desc">iOS app analysis and exploitation tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/chaitin/passionfruit" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="ios jailbreak detection testing">
                     <span class="tool-name">LibertyLite</span>
                     <p class="tool-desc">Tool for iOS jailbreak detection and testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://liberty-lite.com/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="api">
-            <h2 class="category-title">🌍 API Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🌍 API Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="api development testing">
                     <span class="tool-name">Postman</span>
                     <p class="tool-desc">API development and testing platform.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.postman.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api security testing manipulation">
                     <span class="tool-name">Burp Suite Pro ⭐</span>
                     <p class="tool-desc">API security testing and manipulation.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://portswigger.net/burp" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api documentation interactive">
                     <span class="tool-name">Swagger UI</span>
                     <p class="tool-desc">Interactive API documentation tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://swagger.io/tools/swagger-ui/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api endpoint enumeration">
                     <span class="tool-name">Kite Runner</span>
                     <p class="tool-desc">API endpoint enumeration tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/assetnote/kiterunner" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api rest client testing">
                     <span class="tool-name">Insomnia</span>
                     <p class="tool-desc">REST API client for testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://insomnia.rest/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api graphql schema visualization">
                     <span class="tool-name">GraphQL Voyager</span>
                     <p class="tool-desc">GraphQL schema visualization tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/APIs-guru/graphql-voyager" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api graphql penetration testing">
                     <span class="tool-name">GraphQL Raider</span>
                     <p class="tool-desc">GraphQL penetration testing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/GraphQLRaider/GraphQLMap" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api security automation">
                     <span class="tool-name">APIsec</span>
                     <p class="tool-desc">Automated API security testing platform.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.apisec.ai/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api fuzzing testing">
                     <span class="tool-name">OWASP API Fuzzer</span>
                     <p class="tool-desc">Fuzzing tool for API vulnerability testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://owasp.org/www-project-api-security/" class="tool-link">Documentation</a>
                 </div>
                 <div class="tool" data-keywords="api monitoring security">
                     <span class="tool-name">42Crunch</span>
                     <p class="tool-desc">API security auditing and monitoring.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.42crunch.com/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="source-code">
-            <h2 class="category-title">🔍 Source Code Review <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🔍 Source Code Review <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="code static analysis vulnerabilities">
                     <span class="tool-name">SonarQube</span>
                     <p class="tool-desc">Static code analysis for vulnerabilities.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.sonarqube.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code dependency security scanning">
                     <span class="tool-name">Snyk</span>
                     <p class="tool-desc">Dependency and code security scanning.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://snyk.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code static analysis lightweight">
                     <span class="tool-name">Semgrep</span>
                     <p class="tool-desc">Lightweight static analysis tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://semgrep.dev/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code security enterprise source">
                     <span class="tool-name">Fortify Workbench</span>
                     <p class="tool-desc">Enterprise source code security analysis.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.microfocus.com/en-us/cyberres/fortify-static-code-analyzer" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code static application security testing">
                     <span class="tool-name">Checkmarx</span>
                     <p class="tool-desc">Static application security testing (SAST).</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.checkmarx.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code security cloud-based scanning">
                     <span class="tool-name">Veracode</span>
                     <p class="tool-desc">Cloud-based code security scanning.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.veracode.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code semantic analysis vulnerabilities">
                     <span class="tool-name">CodeQL</span>
                     <p class="tool-desc">Semantic code analysis for vulnerabilities.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://codeql.github.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code python security linter">
                     <span class="tool-name">Bandit</span>
                     <p class="tool-desc">Python security linter.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://bandit.readthedocs.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code java security audit">
                     <span class="tool-name">FindSecBugs</span>
                     <p class="tool-desc">Security audit tool for Java.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="http://find-sec-bugs.github.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="code javascript security analysis">
                     <span class="tool-name">Retire.js</span>
                     <p class="tool-desc">JavaScript library vulnerability scanner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://retirejs.github.io/retire.js/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="thick-client">
-            <h2 class="category-title">🖥️ Thick Client Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🖥️ Thick Client Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="thick client http debugging proxy">
                     <span class="tool-name">Fiddler</span>
                     <p class="tool-desc">HTTP debugging proxy for thick clients.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.telerik.com/fiddler" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client windows system debugging">
                     <span class="tool-name">Sysinternals Suite</span>
                     <p class="tool-desc">Tools for Windows system debugging.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://docs.microsoft.com/en-us/sysinternals/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client net debugger decompiler">
                     <span class="tool-name">dnSpy</span>
                     <p class="tool-desc">.NET debugger and decompiler.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/dnSpy/dnSpy" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client net deobfuscator">
                     <span class="tool-name">de4dot</span>
                     <p class="tool-desc">.NET deobfuscator.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/0xd4d/de4dot" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client disassembler debugger">
                     <span class="tool-name">IDA Pro</span>
                     <p class="tool-desc">Disassembler and debugger for thick clients.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://hex-rays.com/ida-pro/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client process monitoring">
                     <span class="tool-name">Process Explorer</span>
                     <p class="tool-desc">Advanced process monitoring tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client pe file analyzer">
                     <span class="tool-name">CF Explorer</span>
                     <p class="tool-desc">PE file analyzer for Windows.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://ntcore.com/exsuite.php" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client x86 debugger reverse engineering">
                     <span class="tool-name">OllyDbg</span>
                     <p class="tool-desc">x86 debugger for reverse engineering.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="http://www.ollydbg.de/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client x64 x86 debugger">
                     <span class="tool-name">x64dbg</span>
                     <p class="tool-desc">x64/x86 debugger for Windows.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://x64dbg.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="thick client reverse engineering open-source">
                     <span class="tool-name">Ghidra</span>
                     <p class="tool-desc">Open-source reverse engineering tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://ghidra-sre.org/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="network">
-            <h2 class="category-title">🌐 Network Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🌐 Network Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="network scanning enumeration">
                     <span class="tool-name">Nmap</span>
                     <p class="tool-desc">Network scanning and enumeration.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://nmap.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network packet analysis">
                     <span class="tool-name">Wireshark</span>
                     <p class="tool-desc">Network packet analysis tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.wireshark.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network penetration testing exploit">
                     <span class="tool-name">Metasploit Framework</span>
                     <p class="tool-desc">Penetration testing and exploit framework.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.metasploit.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network vulnerability scanner">
                     <span class="tool-name">Nessus</span>
                     <p class="tool-desc">Vulnerability scanner for networks.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.tenable.com/products/nessus" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network vulnerability scanner open-source">
                     <span class="tool-name">OpenVAS</span>
                     <p class="tool-desc">Open-source vulnerability scanner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.openvas.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network llmnr nbt-ns mdns poisoner">
                     <span class="tool-name">Responder</span>
                     <p class="tool-desc">LLMNR, NBT-NS, and MDNS poisoner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/lgandx/Responder" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network traffic analysis">
                     <span class="tool-name">tcpdump</span>
                     <p class="tool-desc">Command-line packet analyzer for networks.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.tcpdump.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network port scanning advanced">
                     <span class="tool-name">Masscan</span>
                     <p class="tool-desc">Fast network port scanner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/robertdavidgraham/masscan" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network intrusion detection">
                     <span class="tool-name">Snort</span>
                     <p class="tool-desc">Open-source network intrusion detection system.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.snort.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="network security auditing">
                     <span class="tool-name">Netcat</span>
                     <p class="tool-desc">Versatile networking tool for auditing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://netcat.sourceforge.net/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="ad">
-            <h2 class="category-title">🗂️ Active Directory Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🗂️ Active Directory Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="active directory attack path mapping">
                     <span class="tool-name">Bloodhound</span>
                     <p class="tool-desc">Active Directory attack path mapping.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/BloodHoundAD/BloodHound" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory credential extraction">
                     <span class="tool-name">Mimikatz</span>
                     <p class="tool-desc">Credential extraction tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/gentilkiwi/mimikatz" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory enumeration attack">
                     <span class="tool-name">CrackMapExec</span>
                     <p class="tool-desc">Active Directory enumeration and attack tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/Porchetta-Industries/CrackMapExec" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory python scripts attacks">
                     <span class="tool-name">Impacket</span>
                     <p class="tool-desc">Collection of Python scripts for AD attacks.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/SecureAuthCorp/impacket" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory kerberos brute-forcing">
                     <span class="tool-name">Kerbrute</span>
                     <p class="tool-desc">Kerberos brute-forcing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/ropnop/kerbrute" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory kerberos ticket manipulation">
                     <span class="tool-name">Rubeus</span>
                     <p class="tool-desc">Kerberos ticket manipulation tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/r3motecontrol/Rubeus" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory ldap enumeration">
                     <span class="tool-name">LDAPDomainDump</span>
                     <p class="tool-desc">LDAP enumeration tool for AD.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/dirkjanm/ldapdomaindump" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory data collection bloodhound">
                     <span class="tool-name">SharpHound</span>
                     <p class="tool-desc">Data collection tool for Bloodhound.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/BloodHoundAD/SharpHound" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory powershell reconnaissance">
                     <span class="tool-name">PowerView</span>
                     <p class="tool-desc">PowerShell tool for AD reconnaissance.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="active directory reconnaissance">
                     <span class="tool-name">ADRecon</span>
                     <p class="tool-desc">Active Directory reconnaissance tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/sense-of-security/ADRecon" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="cloud">
-            <h2 class="category-title">☁️ Cloud Security <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">☁️ Cloud Security <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="cloud aws security assessment">
                     <span class="tool-name">Prowler</span>
                     <p class="tool-desc">AWS security assessment tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/prowler-cloud/prowler" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud multi-cloud security auditing">
                     <span class="tool-name">ScoutSuite</span>
                     <p class="tool-desc">Multi-cloud security auditing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/nccgroup/ScoutSuite" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud security scanning aws azure gcp">
                     <span class="tool-name">Cloudsploit</span>
                     <p class="tool-desc">Cloud security scanning for AWS, Azure, GCP.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aquasecurity/cloudsploit" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud aws penetration testing">
                     <span class="tool-name">Pacu</span>
                     <p class="tool-desc">AWS penetration testing framework.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/RhinoSecurityLabs/pacu" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud query monitor resources">
                     <span class="tool-name">Steampipe</span>
                     <p class="tool-desc">Query and monitor cloud resources.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://steampipe.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud infrastructure security visualization">
                     <span class="tool-name">CloudMapper</span>
                     <p class="tool-desc">Visualize cloud infrastructure security.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/duo-labs/cloudmapper" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud security assessment">
                     <span class="tool-name">NCC Group Scout</span>
                     <p class="tool-desc">Cloud security assessment tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/nccgroup/ScoutSuite" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud kubernetes security benchmarking">
                     <span class="tool-name">kube-bench</span>
                     <p class="tool-desc">Kubernetes security benchmarking.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aquasecurity/kube-bench" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud azure security testing">
                     <span class="tool-name">Azucar</span>
                     <p class="tool-desc">Azure cloud security auditing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/nccgroup/azucar" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="cloud gcp security assessment">
                     <span class="tool-name">GCPAudit</span>
                     <p class="tool-desc">Google Cloud Platform security assessment.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/GoogleCloudPlatform/gcp-audit" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="container">
-            <h2 class="category-title">🛢️ Container Security <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🛢️ Container Security <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="container vulnerability scanner images">
                     <span class="tool-name">Trivy</span>
                     <p class="tool-desc">Vulnerability scanner for containers and images.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aquasecurity/trivy" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container security scanner lightweight">
                     <span class="tool-name">Aqua Microscanner</span>
                     <p class="tool-desc">Lightweight container security scanner.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.aquasec.com/products/microscanner/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container runtime security monitoring">
                     <span class="tool-name">Sysdig</span>
                     <p class="tool-desc">Container runtime security and monitoring.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://sysdig.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container static analysis vulnerabilities">
                     <span class="tool-name">Clair</span>
                     <p class="tool-desc">Static analysis for container vulnerabilities.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/quay/clair" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container image security scanning">
                     <span class="tool-name">Anchore</span>
                     <p class="tool-desc">Container image security scanning.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://anchore.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container security benchmarking docker">
                     <span class="tool-name">Docker Bench</span>
                     <p class="tool-desc">Security benchmarking for Docker.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/docker/docker-bench-security" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container kubernetes penetration testing">
                     <span class="tool-name">kube-hunter</span>
                     <p class="tool-desc">Kubernetes penetration testing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aquasecurity/kube-hunter" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container runtime security policy">
                     <span class="tool-name">Twistlock</span>
                     <p class="tool-desc">Container runtime security and policy enforcement.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.paloaltonetworks.com/prisma/cloud" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container image analysis">
                     <span class="tool-name">Dagda</span>
                     <p class="tool-desc">Container image security analysis.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/eliasgranderubio/dagda" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="container security compliance">
                     <span class="tool-name">OpenSCAP</span>
                     <p class="tool-desc">Security compliance tool for containers.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.open-scap.org/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="firewall">
-            <h2 class="category-title">🔥 Firewall Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🔥 Firewall Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="firewall network packet crafting">
                     <span class="tool-name">hping3</span>
                     <p class="tool-desc">Network packet crafting tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="http://www.hping.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall network packet generation">
                     <span class="tool-name">NPing</span>
                     <p class="tool-desc">Network packet generation tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://nmap.org/nping/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall packet manipulation analysis">
                     <span class="tool-name">Scapy</span>
                     <p class="tool-desc">Packet manipulation and analysis tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://scapy.net/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall network scanner internet-wide">
                     <span class="tool-name">Zmap</span>
                     <p class="tool-desc">Network scanner for Internet-wide surveys.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://zmap.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall rule mapping">
                     <span class="tool-name">firewalk</span>
                     <p class="tool-desc">Firewall rule mapping tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://sourceforge.net/projects/firewalk/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall ids testing">
                     <span class="tool-name">Ftester</span>
                     <p class="tool-desc">Firewall and IDS testing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/kisom/fterm" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall service detection">
                     <span class="tool-name">Nmap (Firewall)</span>
                     <p class="tool-desc">Firewall and service detection.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://nmap.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall bypass testing">
                     <span class="tool-name">bypass</span>
                     <p class="tool-desc">Firewall bypass testing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/EnableSecurity/bypass-firewalls" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall network packet sender">
                     <span class="tool-name">Packet Sender</span>
                     <p class="tool-desc">Network packet sender for testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://packetsender.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="firewall stress testing">
                     <span class="tool-name">hping2</span>
                     <p class="tool-desc">Legacy packet crafting tool for stress testing.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="http://www.hping.org/hping2/" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="wifi">
-            <h2 class="category-title">📡 WiFi Pentesting <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">📡 WiFi Pentesting <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="wifi network security auditing">
                     <span class="tool-name">Aircrack-ng</span>
                     <p class="tool-desc">WiFi network security auditing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.aircrack-ng.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi network detector analyzer">
                     <span class="tool-name">Kismet</span>
                     <p class="tool-desc">Wireless network detector and analyzer.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.kismetwireless.net/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi network attacks swiss army">
                     <span class="tool-name">Bettercap</span>
                     <p class="tool-desc">Swiss army knife for WiFi and network attacks.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.bettercap.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi wps cracking">
                     <span class="tool-name">Reaver</span>
                     <p class="tool-desc">WPS cracking tool for WiFi.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/t6x/reaver-wps-fork-t6x" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi evil twin attack framework">
                     <span class="tool-name">Fluxion</span>
                     <p class="tool-desc">Evil Twin attack framework for WiFi.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/FluxionNetwork/fluxion" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi packet analysis">
                     <span class="tool-name">Wireshark</span>
                     <p class="tool-desc">WiFi packet analysis tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.wireshark.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi packet capture analysis">
                     <span class="tool-name">hcxdtools</span>
                     <p class="tool-desc">WiFi packet capture and analysis.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/ZerBea/hcxdumptool" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi security auditing">
                     <span class="tool-name">Fern WiFi Cracker</span>
                     <p class="tool-desc">WiFi security auditing tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/savio-code/fern-wifi-cracker" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi rogue access points">
                     <span class="tool-name">Evil Twin Attack Tools</span>
                     <p class="tool-desc">Tools for creating rogue WiFi access points.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/wi-fi-analyzer/evil-twin-framework" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="wifi deauthentication attacks">
                     <span class="tool-name">MDK4</span>
                     <p class="tool-desc">WiFi deauthentication and attack tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aircrack-ng/mdk4" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="devsecops">
-            <h2 class="category-title">🛡️ DevSecOps <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🛡️ DevSecOps <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="devsecops github security features">
                     <span class="tool-name">GitHub Advanced Security</span>
                     <p class="tool-desc">Security features for GitHub repositories.</p>
-                    <a href="#" class="tool-link">Documentation</a>
+                    <a href="https://docs.github.com/en/code-security" class="tool-link">Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops vulnerability scanner containers">
                     <span class="tool-name">Trivy</span>
                     <p class="tool-desc">Vulnerability scanner for DevSecOps pipelines.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/aquasecurity/trivy" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops dependency code security">
                     <span class="tool-name">Snyk</span>
                     <p class="tool-desc">Dependency and code security scanning.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://snyk.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops container image security">
                     <span class="tool-name">Anchore</span>
                     <p class="tool-desc">Container and image security for DevSecOps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://anchore.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops dependency vulnerability checker">
                     <span class="tool-name">OWASP Dependency-Check</span>
                     <p class="tool-desc">Open-source dependency vulnerability checker.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://owasp.org/www-project-dependency-check/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops ci/cd python security">
                     <span class="tool-name">Jenkins + Bandit</span>
                     <p class="tool-desc">CI/CD integration for Python security scanning.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.jenkins.io/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops static application security">
                     <span class="tool-name">Checkmarx</span>
                     <p class="tool-desc">SAST for DevSecOps pipelines.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.checkmarx.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops code security cloud-based">
                     <span class="tool-name">Veracode</span>
                     <p class="tool-desc">Cloud-based code security for DevSecOps.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.veracode.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops continuous code quality security">
                     <span class="tool-name">SonarQube</span>
                     <p class="tool-desc">Continuous code quality and security.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.sonarqube.org/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="devsecops container image security analysis">
                     <span class="tool-name">Dagda</span>
                     <p class="tool-desc">Container image security analysis.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/eliasgranderubio/dagda" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
 
         <section class="category" data-category="osint">
-            <h2 class="category-title">🕵️‍♂️ OSINT (Open-Source Intelligence) <button class="toggle-btn">Toggle</button></h2>
+            <h2 class="category-title">🕵️‍♂️ OSINT (Open-Source Intelligence) <button class="toggle-btn"></button></h2>
             <div class="tools">
                 <div class="tool" data-keywords="osint email subdomain ip gathering">
                     <span class="tool-name">theHarvester</span>
                     <p class="tool-desc">Email, subdomain, and IP gathering tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/laramies/theHarvester" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint graphical link analysis">
                     <span class="tool-name">Maltego</span>
                     <p class="tool-desc">Graphical link analysis tool for OSINT.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.maltego.com/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint automated collection analysis">
                     <span class="tool-name">SpiderFoot</span>
                     <p class="tool-desc">Automated OSINT collection and analysis.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.spiderfoot.net/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint web-based framework">
                     <span class="tool-name">Recon-ng</span>
                     <p class="tool-desc">Web-based OSINT framework.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/lanmaster53/recon-ng" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint subdomain enumeration network">
                     <span class="tool-name">Amass</span>
                     <p class="tool-desc">Subdomain enumeration and network mapping.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/owasp-amass/amass" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint document metadata analysis">
                     <span class="tool-name">FOCA</span>
                     <p class="tool-desc">Document metadata analysis tool.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://www.elevenpaths.com/en/labstools/foca/" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint advanced search techniques">
                     <span class="tool-name">Google Dorking</span>
                     <p class="tool-desc">Advanced search techniques for OSINT.</p>
-                    <a href="#" class="tool-link">Tutorials/Documentation</a>
+                    <a href="https://www.exploit-db.com/google-hacking-database" class="tool-link">Tutorials/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint tools resources collection">
                     <span class="tool-name">OSINT Framework</span>
                     <p class="tool-desc">Collection of OSINT tools and resources.</p>
-                    <a href="#" class="tool-link">Documentation</a>
+                    <a href="https://osintframework.com/" class="tool-link">Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint metadata extraction public">
                     <span class="tool-name">Metagoofil</span>
                     <p class="tool-desc">Metadata extraction from public documents.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/laramies/metagoofil" class="tool-link">Download/Documentation</a>
                 </div>
                 <div class="tool" data-keywords="osint username search social">
                     <span class="tool-name">Sherlock</span>
                     <p class="tool-desc">Username search across social platforms.</p>
-                    <a href="#" class="tool-link">Download/Documentation</a>
+                    <a href="https://github.com/sherlock-project/sherlock" class="tool-link">Download/Documentation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" data-category="ai-pentesting">
+            <h2 class="category-title">🤖 AI-Driven Pentesting <button class="toggle-btn"></button></h2>
+            <div class="tools">
+                <div class="tool" data-keywords="ai vulnerability scanning">
+                    <span class="tool-name">AI-Powered Nessus</span>
+                    <p class="tool-desc">AI-enhanced vulnerability scanning.</p>
+                    <a href="https://www.tenable.com/products/nessus" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai network penetration">
+                    <span class="tool-name">Darktrace Antigena</span>
+                    <p class="tool-desc">AI-driven network penetration testing.</p>
+                    <a href="https://www.darktrace.com/products/antigena" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai web app testing">
+                    <span class="tool-name">AI-Burp Suite</span>
+                    <p class="tool-desc">AI-augmented web application testing.</p>
+                    <a href="https://portswigger.net/burp" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai code analysis">
+                    <span class="tool-name">CodeSecure AI</span>
+                    <p class="tool-desc">AI-based source code security analysis.</p>
+                    <a href="https://codesecure.com/" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai threat detection">
+                    <span class="tool-name">CrowdStrike Falcon</span>
+                    <p class="tool-desc">AI-powered threat detection and pentesting.</p>
+                    <a href="https://www.crowdstrike.com/platform/falcon/" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai cloud security">
+                    <span class="tool-name">IBM QRadar AI</span>
+                    <p class="tool-desc">AI-driven cloud security assessment.</p>
+                    <a href="https://www.ibm.com/security/qradar" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai phishing simulation">
+                    <span class="tool-name">Proofpoint AI Simulator</span>
+                    <p class="tool-desc">AI-based phishing and pentesting simulation.</p>
+                    <a href="https://www.proofpoint.com/us/products/security-awareness-training" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai malware analysis">
+                    <span class="tool-name">Cylance AI</span>
+                    <p class="tool-desc">AI-driven malware analysis and pentesting.</p>
+                    <a href="https://www.blackberry.com/us/en/products/cylance-ai" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai endpoint security">
+                    <span class="tool-name">SentinelOne AI</span>
+                    <p class="tool-desc">AI-enhanced endpoint security testing.</p>
+                    <a href="https://www.sentinelone.com/" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="ai vulnerability management">
+                    <span class="tool-name">Rapid7 InsightVM AI</span>
+                    <p class="tool-desc">AI-supported vulnerability management.</p>
+                    <a href="https://www.rapid7.com/products/insightvm/" class="tool-link">Download/Documentation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" data-category="zero-trust">
+            <h2 class="category-title">🔒 Zero Trust Assessment <button class="toggle-btn"></button></h2>
+            <div class="tools">
+                <div class="tool" data-keywords="zero trust network access">
+                    <span class="tool-name">Zscaler Zero Trust</span>
+                    <p class="tool-desc">Zero Trust Network Access (ZTNA) assessment.</p>
+                    <a href="https://www.zscaler.com/products/zero-trust-exchange" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust identity verification">
+                    <span class="tool-name">Okta Zero Trust</span>
+                    <p class="tool-desc">Identity verification for Zero Trust.</p>
+                    <a href="https://www.okta.com/zero-trust/" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust endpoint security">
+                    <span class="tool-name">BeyondTrust Zero Trust</span>
+                    <p class="tool-desc">Endpoint security for Zero Trust assessment.</p>
+                    <a href="https://www.beyondtrust.com/zero-trust" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust cloud security">
+                    <span class="tool-name">Cloudflare Zero Trust</span>
+                    <p class="tool-desc">Cloud-based Zero Trust security testing.</p>
+                    <a href="https://www.cloudflare.com/zero-trust/" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust access control">
+                    <span class="tool-name">Ping Identity Zero Trust</span>
+                    <p class="tool-desc">Access control for Zero Trust environments.</p>
+                    <a href="https://www.pingidentity.com/en/company/blog/2021/06/17/zero-trust.html" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust network segmentation">
+                    <span class="tool-name">Illumio Zero Trust</span>
+                    <p class="tool-desc">Network segmentation for Zero Trust.</p>
+                    <a href="https://www.illumio.com/zero-trust-segmentation" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust compliance auditing">
+                    <span class="tool-name">Tenable Zero Trust</span>
+                    <p class="tool-desc">Compliance auditing for Zero Trust.</p>
+                    <a href="https://www.tenable.com/zero-trust" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust data protection">
+                    <span class="tool-name">Symantec Zero Trust</span>
+                    <p class="tool-desc">Data protection under Zero Trust principles.</p>
+                    <a href="https://www.broadcom.com/products/cyber-security/zero-trust" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust application security">
+                    <span class="tool-name">F5 Zero Trust</span>
+                    <p class="tool-desc">Application security for Zero Trust.</p>
+                    <a href="https://www.f5.com/services/resources/white-papers/zero-trust-architecture" class="tool-link">Download/Documentation</a>
+                </div>
+                <div class="tool" data-keywords="zero trust posture assessment">
+                    <span class="tool-name">Forrester Zero Trust</span>
+                    <p class="tool-desc">Posture assessment tool for Zero Trust.</p>
+                    <a href="https://www.forrester.com/zero-trust" class="tool-link">Download/Documentation</a>
                 </div>
             </div>
         </section>
