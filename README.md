@@ -12,13 +12,13 @@ Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal d
 
 [Facebook](https://facebook.com/adyoi)
 
-[Github](https://github.com/adyoi)
+[Blogspot](https://adyoi.blogspot.com)
 
 [Medium](https://medium.com/adyoi)
 
-[Blogspot](https://adyoi.blogspot.com)
-
 [Linkedin](https://linkedin.com/adiapriyanto)
+
+[Github](https://github.com/adyoi)
 
 [X.com](https://x.com/adyoi)
 
