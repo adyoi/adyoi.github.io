@@ -4,35 +4,24 @@ Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal d
 
 ## Links
 
-[Certification]
-(https://id.scribd.com/user/673773237/Adi-Apriyanto)
+[Certification](https://id.scribd.com/user/673773237/Adi-Apriyanto)
 
-[Instagram]
-(https://instagram.com/adyoi)
+[Instagram](https://instagram.com/adyoi)
 
-[Facebook]
-(https://facebook.com/adyoi)
+[Facebook](https://facebook.com/adyoi)
 
-[Github]
-(https://github.com/adyoi)
+[Github](https://github.com/adyoi)
 
-[Hackmd.io - Computer and Internet Security Frameworks]
-(https://hackmd.io/@adyoi/cisf)
+[Hackmd.io - Computer and Internet Security Frameworks](https://hackmd.io/@adyoi/cisf)
 
-[Medium]
-(https://medium.com/adyoi)
+[Medium](https://medium.com/adyoi)
 
-[Blogspot]
-(https://adyoi.blogspot.com)
+[Blogspot](https://adyoi.blogspot.com)
 
-[Linkedin]
-(https://linkedin.com/adiapriyanto)
+[Linkedin](https://linkedin.com/adiapriyanto)
 
-[X.com]
-(htttps://x.com/adyoi)
+[X.com](htttps://x.com/adyoi)
 
-[Portofolio]
-(https://adyoi.github.io/portofolio.html)
+[Portofolio](https://adyoi.github.io/portofolio.html)
 
-[Pentesting Tools]
-(https://adyoi.github.io/pentesting-tools.html)
+[Pentesting Tools](https://adyoi.github.io/pentesting-tools.html)
