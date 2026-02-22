@@ -6,7 +6,7 @@ Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal d
 
 [Hackmd.io - Computer and Internet Security Frameworks](https://hackmd.io/@adyoi/cisf)
 
-[Certification](https://id.scribd.com/user/673773237/Adi-Apriyanto)
+[Certification](https://id.scribd.com/lists/25935917/Certificates)
 
 [Instagram](https://instagram.com/adyoi)
 
@@ -14,9 +14,9 @@ Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal d
 
 [Blogspot](https://adyoi.blogspot.com)
 
-[Medium](https://medium.com/adyoi)
+[Medium](https://medium.com/@adyoi)
 
-[Linkedin](https://linkedin.com/adiapriyanto)
+[Linkedin](https://id.linkedin.com/adiapriyanto)
 
 [Github](https://github.com/adyoi)
 
