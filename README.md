@@ -1,6 +1,6 @@
 ## Welcome
 
-Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal didunia Cyber mengenai Komputer dan Internet.
+Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal di Dunia Digital tentang Komputer dan Internet.
 
 ## Links
 
