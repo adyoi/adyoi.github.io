@@ -16,7 +16,7 @@ Seorang penikmat Teknologi Informasi yang Idealis dan mengekplorasi banyak hal d
 
 [Medium](https://medium.com/@adyoi)
 
-[Linkedin](https://id.linkedin.com/adiapriyanto)
+[Linkedin](https://www.linkedin.com/in/adiapriyanto)
 
 [Github](https://github.com/adyoi)
 
